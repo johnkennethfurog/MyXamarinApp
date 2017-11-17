@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MyXamarinApp"
+             x:Class="MyXamarinApp.MainPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label BackgroundColor="Gray" Text="{Binding Display}" HorizontalTextAlignment="End"/>
+                <Label Grid.Row="1" FontSize="Large" HorizontalTextAlignment="End" Text="{Binding TempResult}" />
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="7"
+                        Command="{Binding ButtonPressCommand}"
+                        CommandParameter="7"/>
+                <Button Grid.Column="1" Text="8"
+                        Command="{Binding ButtonPressCommand}"
+                        CommandParameter="8"/>
+                <Button Grid.Column="2" Text="9"
+                        Command="{Binding ButtonPressCommand}"
+                        CommandParameter="9"/>
+                <Button Grid.Column="3" Text="+"
+                        Command="{Binding ButtonPressCommand}"
+                        CommandParameter="+"/>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="4"
+                        Command="{Binding ButtonPressCommand}"
+                        CommandParameter="4"/>
+                <Button Grid.Column="1" Text="5"
+                        Command="{Binding ButtonPressCommand}"
+                        CommandParameter="5"/>
+                <Button Grid.Column="2" Text="6"
+                        Command="{Binding ButtonPressCommand}"
+                        CommandParameter="6"/>
+                <Button Grid.Column="3" Text="-"
+                        Command="{Binding ButtonPressCommand}"
+                        CommandParameter="-"/>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="1"
+                        Command="{Binding ButtonPressCommand}"
+                        CommandParameter="1"/>
+                <Button Grid.Column="1" Text="2"
+                        Command="{Binding ButtonPressCommand}"
+                        CommandParameter="2"/>
+                <Button Grid.Column="2" Text="3"
+                        Command="{Binding ButtonPressCommand}"
+                        CommandParameter="3"/>
+                <Button Grid.Column="3" Text="/"
+                        Command="{Binding ButtonPressCommand}"
+                        CommandParameter="/"/>
+            </Grid>
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="C"
+                        Command="{Binding ClearCommand}"/>
+                <Button Grid.Column="1" Text="0"
+                        Command="{Binding ButtonPressCommand}"
+                        CommandParameter="0"/>
+                <Button Grid.Column="2" Text="="
+                        Command="{Binding EqualsCommand}"
+                        />
+                <Button Grid.Column="3" Text="*" 
+                        Command="{Binding ButtonPressCommand}"
+                        CommandParameter="*"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
