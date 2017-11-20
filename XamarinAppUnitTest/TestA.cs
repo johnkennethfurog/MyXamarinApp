@@ -17,7 +17,7 @@ namespace XamarinAppUnitTest
         [Theory]
         [InlineData("1","2","-","5",7)]
         [InlineData("0", "2", "*", "5",10)]
-        [InlineData("2", "2", "+", "5",27)]
+        [InlineData("2", "2", "+", "5",25)]
         public void CheckAdd(string num1,string num2,string operation,string num3,double expected)
         {
             var calcu = new MainPageViewModel();
